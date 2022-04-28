@@ -10,3 +10,27 @@ public:
         return s==t;
     }
 };
+
+#Hashmap Solution
+Time Complexity: O(N)
+Space Complexity: O(N)
+
+class Solution {
+public:
+    bool isAnagram(string s, string t) {
+        if(s.size()!=t.size()) return false;
+        unordered_map<char,int>firstString;
+        unordered_map<char,int>secondString;
+        
+        for(char x : s){
+            firstString[x]++;
+        }
+        for(char x : t){
+            secondString[x]++;
+        }
+        for(auto it: firstString){
+            if(it.second!=secondString[it.first]) return false; 
+        }
+        return true;
+    }
+};
