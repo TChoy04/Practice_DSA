@@ -5,7 +5,6 @@ Space Complexity: O(1)
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
-        //if(nums.size()==1) return nums[0];
         int runningSum = 0;
         int currMax = INT_MIN;
         int ans = INT_MIN;
