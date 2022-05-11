@@ -34,3 +34,25 @@ public:
         return true;
     }
 };
+
+#Hashmap Solution, Array Implementation
+Time Complexity: O(N)
+Space Complexity: O(N)
+
+class Solution {
+public:
+    bool isAnagram(string s, string t) {
+        if(s.size()!=t.size()) return false;
+        int check[26] = {0};
+        for(char x : s){
+            check[x-'a']++;
+        }
+        for(char x : t){
+            check[x-'a']--;
+        }
+        for(int x = 0; x<26; x++){
+            if(check[x]) return false;
+        }
+        return true;
+    }
+};
