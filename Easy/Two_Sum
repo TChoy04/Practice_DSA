@@ -14,3 +14,5 @@ public:
         return {};
     }
 };
+
+Could create a vector with a pair inside then sort, but this would result in a greater time complexity than the hashmap solution, rendering it obsolete. 
