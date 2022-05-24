@@ -2,6 +2,9 @@
 Time Complexity: O(N)
 Space Complexity: O(1)
 
+// Have the window cover the entire array, start closing it and measure the area by taking the width and multiplying it with the minimum height.
+
+
 class Solution {
 public:
     int maxArea(vector<int>& height) {
