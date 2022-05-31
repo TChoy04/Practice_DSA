@@ -1,2 +1,5 @@
 #Values are not immutable, simply set the value of each node to INT_MIN, check for INT_MIN in the loop, which will confirm there is a loop, else return false after looping.
 
+Time Complexity: O(N)
+Space Complexity: O(1)
+
