@@ -1,1 +1,40 @@
+#Messy Solution but
+#Iterate through the string until a duplicate is found to find the size of sliding window.
+#Use sliding window to find largest substring, use a set to keep track of the letters in the substring. Use a res variable to keep track of the maximum result.
+Time Complexity: O(N)
+Space Complexity: O(N)
+#There is probably a more efficient way to do the same thing if rewritten. Solution is almost definetely not optimal.
 
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        unordered_set<char>ans;
+        int p1 = 0;
+        int p2 = 0;
+        int res = 0;
+        for(char x : s){
+            if(ans.find(x)==ans.end()) {
+                ans.insert(x);
+                p2++;
+                int g = ans.size();
+                res = max(g,res);
+                }
+            else break;
+        }
+        while(p2!=s.size()){
+            if(ans.find(s[p2])!=ans.end()){
+                ans.erase(s[p1]);
+                p1++;
+            }
+            else{
+                ans.insert(s[p2]);
+                p2++;
+                
+            }
+            int g = ans.size();
+            res = max(g,res);
+        }
+        return res;
+        
+    }
+};
