@@ -3,7 +3,7 @@
 #Use sliding window to find largest substring, use a set to keep track of the letters in the substring. Use a res variable to keep track of the maximum result.
 Time Complexity: O(N)
 Space Complexity: O(N)
-#There is probably a more efficient way to do the same thing if rewritten. Solution is almost definetely not optimal.
+#There is probably a more efficient way to do the same thing if rewritten. There is definetely a more concise solution.
 
 class Solution {
 public:
