@@ -38,3 +38,28 @@ public:
         
     }
 };
+
+#After further analysis, there is no need to find the size of the first window, meaning we can get rid of the first for loop.
+
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        unordered_set<char>ans;
+        int p1 = 0;
+        int p2 = 0;
+        int res = 0;
+        while(p2!=s.size()){
+            if(ans.find(s[p2])!=ans.end()){
+                ans.erase(s[p1]);
+                p1++;
+            }
+            else{
+                ans.insert(s[p2]);
+                p2++;
+            }
+            int g = ans.size();
+            res = max(g,res);
+        }
+        return res;
+    }
+};
