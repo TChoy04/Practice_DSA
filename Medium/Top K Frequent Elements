@@ -1,6 +1,6 @@
 #Use a map to store values and their counts. Then insert it into a priority queue. Take the top values from the priority queue to populate answer array 
 #until there are K elements
-Time Complexity: O(N)
+Time Complexity: O(NLogN)
 Space Complexity: O(N)
 
 class Solution {
